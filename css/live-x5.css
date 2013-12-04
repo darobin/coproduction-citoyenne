@@ -1,0 +1,148 @@
+
+/*
+    XXX TODO
+    - need a print stylesheet or this will look like shite
+*/
+
+
+html, body {
+    margin: 0;
+    padding:    0;
+    background: #988;
+    font-family:    Optima, Helvetica, sans-serif;
+    font-size:    0.9em;
+}
+
+article {
+    display:    block;
+    position:   relative;
+    background: #fff;
+    color:      #000;
+    margin: 2em auto;
+    border: 1px solid #000;
+    width:  13.5cm;
+    padding:    2cm; /* added to the above... */
+    -moz-box-shadow:    2px 2px 1px #000;
+}
+
+h1 {
+    font-family:    Futura, sans-serif;
+    text-transform: uppercase;
+}
+
+section section h2 {
+    font-size:  1.2em;
+    font-style: italic;
+}
+
+p, dd {
+    text-align: justify;
+}
+
+/*#wcount {
+    position:   absolute;
+    color:  #ccc;
+    font-size:  0.9em;
+    top:    1em;
+    right:  1em;
+}
+*/
+
+#wcount {
+    position:   fixed;
+    color:  #fff;
+    font-size:  0.9em;
+    top:    1em;
+    right:  1em;
+    padding:    5px;
+/*    background: rgba(255, 255, 255, 0.3);*/
+}
+
+a {
+    color:  #632c2c;
+    text-decoration: none;
+}
+
+.quote {
+    font-style: italic;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+blockquote::before {
+    content:    "“";
+    float:  left;
+    font-size:  5em;
+    color:  #999;
+    display:    block;
+    font-family:    Georgia, "Times New Roman", serif;
+    margin: -10px 0 0 -20px;
+}
+
+blockquote::after {
+    content:    "”";
+    float:  right;
+    font-size:  5em;
+    color:  #999;
+    display:    block;
+    font-family:    Georgia, "Times New Roman", serif;
+    margin: -50px -30px 0 0;
+}
+
+.toc li {
+    list-style-type:    none;
+}
+
+.toc a {
+    text-decoration:    none;
+    color:  #333;
+}
+
+.toc a:hover {
+    color:  #000;
+}
+
+.foot {
+    font-size: .83em;
+    vertical-align: super;
+}
+
+#footnotes li a {
+    font-size: .83em;
+    vertical-align: super;
+}
+
+.meta {
+    font-style: italic;
+    text-align: right;
+}
+
+.notTranslated {
+    color:  #ddd;
+}
+
+@media print {
+    html, body {
+        background: #fff;
+    }
+
+    article {
+        margin: 2em auto;
+        border: none;
+        width:  auto;
+        padding:    2cm;
+        -moz-box-shadow:    none;
+    }
+    #wcount {
+        display:    none;
+    }
+
+    a {
+        color:  #000;
+    }
+    .toc a {
+        color:  #000;
+    }
+}
